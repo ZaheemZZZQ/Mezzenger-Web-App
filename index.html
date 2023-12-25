@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziber</title>
+    <link rel="stylesheet" href="Styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <div class="title">
+                <img src="Images/ChatIcon.png" width="50px">
+                <h1>Mezzenger</h1>
+            </div>
+
+            <button type="button" class="menu-button" onclick="ShowHide()">
+                <img src="Images/MenuIcon.png" width="35px">
+            </button>
+
+        </header>
+        <div class="container">
+            <div class="users-window">
+                <div class="users-head">
+                    <h3>People</h3>
+                    <h4 class="User-Count">0</h4>
+                </div>
+                <div class="users-list">
+
+                </div>
+            </div>
+            <div class="chat-window">
+                <div class="chats">
+
+
+                </div>
+
+                <div class="user-input">
+                    <input id="User-Msg" type="text" placeholder="Type Your Message Here...">
+
+
+                    <button type="button" class="send-button">Send</button>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        var uwindow = document.querySelector('.users-window');
+
+        function ShowHide() {
+            if (uwindow.style.display === "block") {
+                uwindow.style.display = "none";
+            } else {
+                uwindow.style.display = "block";
+            }
+        }
+    </script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+
+
+</body>
+
+</html>
